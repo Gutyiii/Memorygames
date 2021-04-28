@@ -15,8 +15,15 @@ main{
 #jatekter{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    margin: 5px;
 }
 
 h1{
     color:aquamarine;
+}
+
+img{
+    width: 200px;
+    height: auto;
+    margin: auto;
 }
