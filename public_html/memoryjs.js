@@ -62,32 +62,34 @@ $(function () {
 //    $("div img").eq(1).attr("src", kepek[1].eleresiUt);
 //    $("div img").eq(1).attr("alt", kepek[2].alt);
 //    $("div img").click(kattintasra);
-    //var i=0;
+
     var j = 0;
     for (var i = 0; i < 12; i++) {
         $("#jatekter img").eq(i).attr("src", kepek[j].hatlap);
         $("#jatekter img").eq(i).attr("alt", kepek[j].alt);
-        j++;
+        $("#jatekter img").eq(i).click(fordit);
         if (j === 6) {
             j = 0;
+            j++;
         }
+
+//        if (elso === true) {
+//            $("#jatekter img").eq(i).click(fordit);
+//            elso = false;
+//        } else {
+//            ellenoriz;
+//            alert("eh");
+//            elso = true;
+//        }
     }
-    
-    $("#jatekter img").eq(i).click(fordit);
-    var katt=0;
-        if($("#jatekter img").eq(i).click(fordit)){
-            katt++;
-            if(katt===2){
-                ellenoriz();
-                katt=0;
-            }
-        }
+
 });
 
 function fordit() {
     var index = Number(this.id);
     tomb += index;
-    //alert(index);
+//    alert(index);
+//    $(this).eq(0).attr("src", kepek[index].eleresiUt);
     if (index >= 6) {
         $(this).eq(0).attr("src", kepek[index - 6].eleresiUt);
     } else {
@@ -96,22 +98,23 @@ function fordit() {
 }
 
 function visszaFordit() {
-//    for (var i = 0; i < tomb.length; i++) {
-//        $(this).eq(i).attr("src", kepek[tomb[i]].hatlap);
-//    }
+    for (var i = 0; i < tomb.length; i++) {
+        $(this).eq(i).attr("src", kepek[tomb[i]].hatlap);
+    }
 }
 
 function kezd() {
-    
+
 }
 
 function ellenoriz() {
-    if(tomb[0]===tomb[1]){
+    if (tomb[0] === tomb[1]) {
         pontok++;
-    }else{
+        $("footer").append(pontok);
+    } else {
         visszaFordit();
     }
-    tomb=[];
+    tomb = [];
 }
 
 function kever() {
