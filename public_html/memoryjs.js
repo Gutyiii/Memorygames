@@ -50,11 +50,10 @@ $(function () {
 //    $("div img").eq(1).attr("src", kepek[1].eleresiUt);
 //    $("div img").eq(1).attr("alt", kepek[2].alt);
 //    $("div img").click(kattintasra);
-    var i=0;
+    //var i=0;
     for (var i = 0; i < kepek.length; i++) {
         $("#jatekter img").eq(i).attr("src", kepek[i].eleresiUt);
         $("#jatekter img").eq(i).attr("alt", kepek[i].alt);
-        i++;
     }
         
 });
