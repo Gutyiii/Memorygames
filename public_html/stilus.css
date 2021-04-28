@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+main{
+    max-width: 800px;
+    margin: auto;
+    background: black;
+}
+
+*{
+    border: 1px solid gray;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+#jatekter{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+h1{
+    color:aquamarine;
+}
