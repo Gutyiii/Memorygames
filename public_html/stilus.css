@@ -19,11 +19,16 @@ main{
     margin: auto;
 }
 
-h1{
+h1, footer{
     color:aquamarine;
     text-align: center;
     display: grid;
     grid-template-columns: 1fr;
+}
+
+header div{
+    width: 73px;
+    margin: auto;
 }
 
 img{
