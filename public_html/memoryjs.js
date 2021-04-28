@@ -1,34 +1,40 @@
 var kep1={
     eleresiUt:"kepek/kep1.jpg",
     alt:"husky"
-}
+};
 var kep2={
     eleresiUt:"kepek/kep2.jpg",
     alt:"nemetjuhasz"
-}
+};
 var kep3={
     eleresiUt:"kepek/kep3.jpg",
     alt:"labrador"
-}
+};
 var kep4={
     eleresiUt:"kepek/kep4.jpg",
     alt:"bordercollie"
-}
+};
 var kep5={
     eleresiUt:"kepek/kep5.jpg",
     alt:"goldenretriver"
-}
+};
 var kep6={
     eleresiUt:"kepek/kep6.jpg",
     alt:"akita"
-}
-
+};
 var hatlap={
     eleresiUt:"kepek/hatlap2.0.jpg",
     alt:"hatlap"
-}
+};
 
 kepek = [kep1,kep2,kep3,kep4,kep5,kep6];
+
+tomb = [];
+var elso = true;
+var elozo;
+var alap;
+var pontok = 0;
+
 
 $(function () {
 
