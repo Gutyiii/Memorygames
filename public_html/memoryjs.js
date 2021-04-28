@@ -1,32 +1,32 @@
 var kep1={
     eleresiUt:"kepek/kep1.jpg",
     alt:"husky"
-}
+};
 var kep2={
     eleresiUt:"kepek/kep2.jpg",
     alt:"nemetjuhasz"
-}
+};
 var kep3={
     eleresiUt:"kepek/kep3.jpg",
     alt:"labrador"
-}
+};
 var kep4={
     eleresiUt:"kepek/kep4.jpg",
     alt:"bordercollie"
-}
+};
 var kep5={
     eleresiUt:"kepek/kep5.jpg",
     alt:"goldenretriver"
-}
+};
 var kep6={
     eleresiUt:"kepek/kep6.jpg",
     alt:"akita"
-}
+};
 
 var hatlap={
     eleresiUt:"kepek/hatlap2.0.jpg",
     alt:"hatlap"
-}
+};
 
 kepek = [kep1,kep2,kep3,kep4,kep5,kep6];
 
@@ -44,11 +44,10 @@ $(function () {
 //    $("div img").eq(1).attr("src", kepek[1].eleresiUt);
 //    $("div img").eq(1).attr("alt", kepek[2].alt);
 //    $("div img").click(kattintasra);
-    var i=0;
+    //var i=0;
     for (var i = 0; i < kepek.length; i++) {
         $("#jatekter img").eq(i).attr("src", kepek[i].eleresiUt);
         $("#jatekter img").eq(i).attr("alt", kepek[i].alt);
-        i++;
     }
         
 });
