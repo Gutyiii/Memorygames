@@ -28,18 +28,28 @@ var kep6 = {
     alt: "akita",
     hatlap: "kepek/hatlap2.0.png"
 };
-
 var hatlap = {
     eleresiUt: "kepek/hatlap2.0.jpg",
     alt: "hatlap"
+
 };
 
 kepek = [kep1, kep2, kep3, kep4, kep5, kep6];
 
+var tomb = [];
+var elso = true;
+var elozo;
+var alap;
+var pontok = 0;
+
+
 $(function () {
-         
+
     kezd();
-    
+    $("section").eq(0).html(" ");
+    for (var i = 0; i < 12; i++) {
+        $("section").eq(0).append("<img id=" + i + ">");
+    }
 //    $("div").html("Szia Petra");
 //    $("div").append("<img>");
 //    $("div img").attr("src", "kepek/valami.jpg");
@@ -53,28 +63,59 @@ $(function () {
 //    $("div img").eq(1).attr("alt", kepek[2].alt);
 //    $("div img").click(kattintasra);
     //var i=0;
-    var j=0;
+    var j = 0;
     for (var i = 0; i < 12; i++) {
         $("#jatekter img").eq(i).attr("src", kepek[j].hatlap);
         $("#jatekter img").eq(i).attr("alt", kepek[j].alt);
         j++;
-        if (j===6){
-            j=0;
+        if (j === 6) {
+            j = 0;
         }
     }
     
+    $("#jatekter img").eq(i).click(fordit);
+    var katt=0;
+        if($("#jatekter img").eq(i).click(fordit)){
+            katt++;
+            if(katt===2){
+                ellenoriz();
+                katt=0;
+            }
+        }
 });
 
-function kezd(){
+function fordit() {
+    var index = Number(this.id);
+    tomb += index;
+    //alert(index);
+    if (index >= 6) {
+        $(this).eq(0).attr("src", kepek[index - 6].eleresiUt);
+    } else {
+        $(this).eq(0).attr("src", kepek[index].eleresiUt);
+    }
+}
+
+function visszaFordit() {
+//    for (var i = 0; i < tomb.length; i++) {
+//        $(this).eq(i).attr("src", kepek[tomb[i]].hatlap);
+//    }
+}
+
+function kezd() {
     
 }
 
-function ellenoriz(){
-    
+function ellenoriz() {
+    if(tomb[0]===tomb[1]){
+        pontok++;
+    }else{
+        visszaFordit();
+    }
+    tomb=[];
 }
 
-function kever(){
-    pontok=0;
+function kever() {
+    pontok = 0;
 }
 
 //var kep1={
