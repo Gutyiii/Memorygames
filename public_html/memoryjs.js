@@ -39,7 +39,7 @@ kepek = [kep1, kep2, kep3, kep4, kep5, kep6];
 $(function () {
          
     kezd();
-         
+    
 //    $("div").html("Szia Petra");
 //    $("div").append("<img>");
 //    $("div img").attr("src", "kepek/valami.jpg");
