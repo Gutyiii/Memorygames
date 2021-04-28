@@ -19,9 +19,14 @@ main{
     margin: auto;
 }
 
-h1{
+h1, footer{
     color:aquamarine;
     text-align: center;
+}
+
+header div{
+    width: 73px;
+    margin: auto;
 }
 
 img{
