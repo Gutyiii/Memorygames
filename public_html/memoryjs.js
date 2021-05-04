@@ -80,6 +80,7 @@ $(function () {
 //    $("div img").eq(1).attr("src", kepek[1].eleresiUt);
 //    $("div img").eq(1).attr("alt", kepek[2].alt);
 //    $("div img").click(kattintasra);
+
     //var i=0;
     //var j = 0;
     var kepElemTomb = $("section img");
@@ -101,12 +102,14 @@ $(function () {
 //        }
     }
     kever();
+
 });
 
 function fordit() {
     var index = Number(this.id);
     tomb += index;
-    //alert(index);
+//    alert(index);
+//    $(this).eq(0).attr("src", kepek[index].eleresiUt);
     if (index >= 6) {
         $(this).eq(0).attr("src", kepek[index - 6].eleresiUt);
     } else {
@@ -115,6 +118,7 @@ function fordit() {
 }
 
 function visszaFordit() {
+
 //    for (var i = 0; i < tomb.length; i++) {
 //        $(this).eq(i).attr("src", kepek[tomb[i]].hatlap);
 //    }
@@ -141,6 +145,25 @@ function ellenoriz() {
     } else {
         visszaFordit();
     }
+
+    for (var i = 0; i < tomb.length; i++){
+        $(this).eq(i).attr("src", kepek[tomb[i]].hatlap);
+    }
+}
+
+function kezd() {
+
+}
+
+function ellenoriz() {
+    if (tomb[0] === tomb[1]) {
+        pontok++;
+        $("footer").append(pontok);
+    } else {
+        visszaFordit();
+    }
+    tomb = [];
+
 }
 
 function kever() {
